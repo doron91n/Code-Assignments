@@ -1,0 +1,130 @@
+
+/**
+ * Dark.css - sets global application fxml visual settings style.
+ *
+ */
+.background {
+    -fx-background-color: #1d1d1d;
+}
+#headerLabel {
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+    -fx-padding: 5.0px;
+}
+#board_grid {
+     -fx-background-color: white;
+    -fx-background-radius: 5.0;
+    -fx-background-insets: 0.0 5.0 0.0 5.0;
+
+}
+#windowHolder {
+    -fx-background-color: #1d1d1d;
+}
+
+#menu {
+    -fx-background-color: #1d1d1d;
+}
+
+#setting {
+    -fx-background-color: #1d1d1d;
+}
+
+#welcome_text {
+     -fx-font-size: 20.0px;
+     -fx-font-family: Ariel;
+     -fx-fill: white;
+}
+
+#opening_player_text {
+     -fx-font-size: 20.0px;
+     -fx-font-family: Ariel;
+     -fx-fill: white;
+}
+
+#game_settings_text {
+     -fx-font-size: 40.0px;
+     -fx-font-family: Ariel;
+     -fx-fill: white;
+}
+#game_over_text {
+     -fx-font-size: 40.0px;
+     -fx-font-family: Ariel;
+     -fx-fill: white;
+}
+
+#settings_msg_text {
+     -fx-font-size: 15.0px;
+     -fx-font-family: Ariel;
+     -fx-fill: red;
+}
+#game_over_winner_text {
+     -fx-font-size: 15.0px;
+     -fx-font-family: Ariel;
+     -fx-fill: white;
+}
+#player_1_color_text {
+     -fx-font-size: 20.0px;
+     -fx-font-family: Ariel;
+     -fx-fill: white;
+}
+
+#player_2_color_text {
+     -fx-font-size: 20.0px;
+     -fx-font-family: Ariel;
+     -fx-fill: white;
+}
+
+#board_size_text {
+     -fx-font-size: 20.0px;
+     -fx-font-family: Ariel;
+     -fx-fill: white;
+}
+
+.text-field {
+    -fx-font-size: 12.0pt;
+    -fx-font-family: Ariel;
+}
+
+.button {
+    -fx-padding: 5.0 22.0 5.0 22.0;   
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 2.0;
+    -fx-background-radius: 0.0;
+    -fx-background-color: #1d1d1d;
+    -fx-font-family:  Arial;
+    -fx-font-size: 11.0pt;
+    -fx-text-fill: #d8d8d8;
+    -fx-background-insets: 0.0 0.0 0.0 0.0, 0.0, 1.0, 2.0;
+}
+
+.button:hover {
+    -fx-background-color: #3a3a3a;
+}
+
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: white;
+  -fx-text-fill: #1d1d1d;
+}
+
+.button:focused {
+    -fx-border-color: white, white;
+    -fx-border-width: 1.0, 1.0;
+    -fx-border-style: solid, segments(1.0, 1.0);
+    -fx-border-radius: 0.0, 0.0;
+    -fx-border-insets: 1.0 1.0 1.0 1.0, 0.0;
+}
+
+.button:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+}
+
+.button:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: #ffffff;
+}
+
+.button:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30.0%);
+}

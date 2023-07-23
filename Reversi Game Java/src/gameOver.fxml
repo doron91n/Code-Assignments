@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+/**
+ * gameOver.fxml - sets application game over window components layout.
+ *
+ */
+ -->
+
+<?scenebuilder-stylesheet Dark.css?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="gameOver" prefHeight="400" prefWidth="400" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameOverController">
+  <children>
+      <Text fx:id="game_over_text" strokeType="OUTSIDE" strokeWidth="0.0" text="Game Over!!" textAlignment="CENTER">
+         <StackPane.margin>
+            <Insets bottom="400.0" />
+         </StackPane.margin>
+      </Text>
+      <Text fx:id="game_over_winner_text" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="364.0">
+         <StackPane.margin>
+            <Insets />
+         </StackPane.margin>
+      </Text>
+      <Button mnemonicParsing="false" onAction="#exit" prefHeight="40.0" prefWidth="150.0" text="exit">
+         <StackPane.margin>
+            <Insets top="300.0" />
+         </StackPane.margin>
+      </Button>
+  </children>
+</StackPane>
