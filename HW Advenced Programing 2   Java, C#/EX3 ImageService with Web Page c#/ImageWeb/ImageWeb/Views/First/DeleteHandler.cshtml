@@ -1,0 +1,28 @@
+﻿@model ImageWeb.Models.Handlers
+
+@{
+    ViewBag.Title = "DeleteHandler";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <h1 class="header">Are you sure you want to delete the selected handler? </h1>
+        <button id="submitButton" class="okButton"> @Html.ActionLink("OK", "DeleteHandOk", new { handler = Model.getPath})</button>
+        <button id="cancelButton"class="cancleButton"> @Html.ActionLink("CANCLE", "ConfigView")</button>
+    </div>
+</body>
+</html>
+<script>
+document.getElementById("submitButton").addEventListener("click", myFunction);
+function myFunction() {
+    document.getElementById('submitButton').disabled = true;
+    document.getElementById('cancelButton').disabled = true;
+}
+</script>

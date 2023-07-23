@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+@model ImageWeb.Models.LogsModel
+@{
+    ViewBag.Title = "LogsView";
+}
+<head>
+    <style>
+        .table {
+            border-collapse: collapse;
+            width: 100%;     
+        grid-column-align: center;
+        }
+
+        th {
+            height: 50px;
+            color:black;
+            font-size: large;
+            font-family:Arial;
+        }
+        td{
+            color:black;
+            font-size:medium;
+            font-family:Arial;
+        }
+        Filter_text_box{
+ width:100px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Logs</h2>
+    <br />
+    <br />
+    <div>
+        <input type="text" id="MsgTypeFilter" class ="Filter_text_box " placeholder="Filter By Log Type (Info/Warning/Fail)" >
+        <input type="button" id="btnFilterByType" onclick="FilterLogMsgByType()" value="Filter Logs" />
+    </div>
+    <br />
+    <div class="container">
+        <table id="LogTable" class="table">
+            <thead>
+                <tr>
+                    <th class="col-xs-1"> <p type="text" id="Status" size="5"> Status</p> </th>
+                    <th class="col-xs-8"> <p type="text" id="Message" size="5"> Message</p> </th>
+                </tr>
+            </thead>
+            <tbody>
+                @{ if (Model != null)
+                    {
+                        var log_list = Model.GetLogsList;
+                        if (log_list != null)
+                        {
+                            foreach (var log in log_list)
+                            {
+                                <tr>
+                                    @{switch (log.Status)
+                                        {
+                                            case Commands.Infrastructure.MessageTypeEnum.INFO:
+                                                <td style="background-color:green" class="col-xs-1"> @Html.DisplayFor(modelItem => log.Status) </td>
+                                                break;
+                                            case Commands.Infrastructure.MessageTypeEnum.WARNING:
+                                                <td style="background-color:yellow" class="col-xs-1"> @Html.DisplayFor(modelItem => log.Status)</td>
+                                                break;
+                                            case Commands.Infrastructure.MessageTypeEnum.FAIL:
+                                                <td style="background-color:red" class="col-xs-1"> @Html.DisplayFor(modelItem => log.Status) </td>
+                                                break;
+                                        } }
+                                    <td class="col-xs-8"> @Html.DisplayFor(modelItem => log.Message)</td>
+                                </tr> }
+                                            }
+                                        } }
+            </tbody>
+        </table>
+
+    </div>
+</body>
+</html>
+<script>
+    function FilterLogMsgByType() {
+        // Declare variables
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("MsgTypeFilter");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("LogTable");
+        tr = table.getElementsByTagName("tr");
+        // Loop through all table rows, and hide those who don't match the Filter query
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+    $("input[placeholder]").each(function () {
+        $(this).attr('size', $(this).attr('placeholder').length);
+    });
+</script>

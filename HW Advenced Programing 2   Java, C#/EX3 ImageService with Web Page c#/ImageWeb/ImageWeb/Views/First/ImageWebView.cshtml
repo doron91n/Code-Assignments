@@ -1,0 +1,80 @@
+﻿
+<!DOCTYPE html>
+<html>
+@model ImageWeb.Models.ImageServiceInfoModel
+
+@{
+    ViewBag.Title = "ImageWebView";
+}
+<head>
+    <style>
+
+        .table {
+            border-collapse: collapse;
+            width: 100%;     
+          background-color:cadetblue;
+        grid-column-align: center;
+        }
+
+        th {
+            height: 50px;
+            color:black;
+            font-size: large;
+            font-family:Arial;
+        }
+        td{
+            color:black;
+            font-size:medium;
+            font-family:Arial;
+        }
+    </style>
+ 
+</head>
+
+<body>
+    <h2>Image Web</h2>
+<div>
+    <table>
+        <tr>
+            <td>Image Service Status: @Html.DisplayFor(model => model.GetServiceStatus)</td>
+        </tr>
+        <tr>
+            <td>Number Of Pictures: @Html.DisplayFor(model => model.GetServicePicNum)</td>
+        </tr>
+    </table>
+    <br />
+    <br />
+</div>
+<div>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.GetStudentInstance().FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GetStudentInstance().LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GetStudentInstance().ID)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.GetStudentsInfo())
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID)
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+    </body>
+</html>

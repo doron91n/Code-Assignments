@@ -1,0 +1,29 @@
+﻿@model ImageWeb.Models.PhotoInfo
+@{
+    ViewBag.Title = "DeletePhoto";
+}
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <style>
+        .header{
+            color:crimson;
+        }
+        .Yesbutton{
+            background-color: cornsilk;
+        }
+        .nobutton{
+            background-color:white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="header">Are you sure you want to delete the selected Image? </h1>
+        <button class="Yesbutton"> @Html.ActionLink("Yes", "DeleteAndWait",new { path = Model.ImgPath }, new { @class = "Yesbutton" })</button>
+        <button class="nobutton"> @Html.ActionLink("Cancel", "PhotosView", new { @class = "nobutton" })</button>
+    </div>
+</body>

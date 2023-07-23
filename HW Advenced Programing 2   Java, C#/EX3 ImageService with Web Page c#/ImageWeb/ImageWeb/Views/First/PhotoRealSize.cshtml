@@ -1,0 +1,32 @@
+﻿@model ImageWeb.Models.PhotoInfo
+@{
+    ViewBag.Title = "PhotoRealSize";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-sm-6 col-md-4">
+           @{
+               if (Model != null)
+               {
+                <img src="~/@Model.OutPutDirName/@Model.getYear/@Model.getMonth/@Model.ImgName" />
+                <div class="caption">
+                    <p> @Model.ImgName </p>
+                      <p> Month: @Model.getMonth</p>
+                      <p> Year: @Model.getYear </p> 
+                           <button class="btn btn-default" role="button" >@Html.ActionLink("Delete", "DeletePhoto", new { path = Model.ImgPath })</button>
+                           <button class="btn btn-default" role="button" >@Html.ActionLink("BackToPhotos", "PhotosView")</button>
+                    </div>
+                   }
+               }
+        </div>
+    </div>
+</body>
+</html>

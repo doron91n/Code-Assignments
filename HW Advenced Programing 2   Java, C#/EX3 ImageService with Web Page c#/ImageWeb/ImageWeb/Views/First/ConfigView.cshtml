@@ -1,0 +1,132 @@
+﻿@model ImageWeb.Models.ConfigModel
+
+@{
+    ViewBag.Title = "ConfigView";
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .handler {
+            color: blueviolet;
+            font-size:50px;
+            font-family:Centaur;
+            font-weight:bold;
+        }
+                td{
+            color:black;
+            font-size:medium;
+            font-family:Arial;
+        }
+.btn-group button {
+    
+	-moz-box-shadow:inset 0px 1px 0px 0px #dcecfb;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #dcecfb;
+	box-shadow:inset 0px 1px 0px 0px #dcecfb;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bddbfa), color-stop(1, #80b5ea));
+	background:-moz-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+	background:-webkit-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+	background:-o-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+	background:linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bddbfa', endColorstr='#80b5ea',GradientType=0);
+	background-color:#bddbfa;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #84bbf3;
+	display:block;
+	cursor:pointer;
+	color:white;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 76px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px white;
+}
+.btn-group button:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #80b5ea), color-stop(1, #bddbfa));
+	background:-moz-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+	background:-webkit-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+	background:-o-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+	background:linear-gradient(to bottom, #80b5ea 5%, #bddbfa 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#80b5ea', endColorstr='#bddbfa',GradientType=0);
+	background-color:#80b5ea;
+}
+.btn-group button:active {
+	position:relative;
+	top:1px;
+}
+
+    </style>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <table>
+        <tr><td> Output Directory:  @Html.DisplayFor(model => model.OutputDir)</td></tr>
+        <tr><td> Source Name:  @Html.DisplayFor(model => model.SourceName)</td></tr>
+        <tr><td>Log Name:  @Html.DisplayFor(model => model.LogName)</td></tr>
+        <tr><td>Thumbnail size:  @Html.DisplayFor(model => model.ThumbSize)</td></tr>
+</table>
+
+<p class="handler"> Handlers </p>
+    <br/>
+    <p> Press on Handler To Remove</p>
+<td>
+    <div class="btn-group">
+        @{foreach (var hand in Model.HandlersList)
+          {
+              <button type="button"  class=".btn-group button" id="handlerClick" data-item="@hand">
+              @Html.ActionLink(hand.DirectoryPath, "DeleteHandler",new { path = hand.DirectoryPath})
+              </button>
+          }
+         }
+    </div>
+</td>
+    <!-- Modal -->
+    <div id="deleteModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" style="position: initial">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Delete</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to delete the photo?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn bg-warning" data-dismiss="modal">No</button>
+                    <input type="button" class="btn btn-primary" item="" value="Yes" onclick="" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+    $('#deleteModal').on('show.bs.modal',
+        function(event) {
+            var button = $(event.relatedTarget);
+            var handler = button.data('handler');
+            var modal = $(this);
+
+            // A workaround to pass JQuery parameter to Razor
+            var url = '@Url.Action("DeleteHandOk", "ImageService", new { path = "temp" })';
+            var replace = url.replace('temp', handler);
+
+            // Sets "Yes" button onclick to delete corresponding handler
+            var yesButton = modal.find('.modal-footer input');
+            var noButton = modal.find('.modal-footer button');
+            yesButton.click(function() {
+                yesButton.attr("disabled", true);
+                noButton.attr("disabled", true);
+                location.href = replace;
+            });
+        });
+    </script>
+</body>
+</html>
