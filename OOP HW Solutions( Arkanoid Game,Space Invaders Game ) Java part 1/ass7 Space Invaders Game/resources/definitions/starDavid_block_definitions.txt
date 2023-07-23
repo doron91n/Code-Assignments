@@ -1,0 +1,6 @@
+# block definitions
+bdef symbol:m width:10 height:10 hit_points:1 fill-1:color(RGB(23,36,228))
+
+# spacers definitions
+sdef symbol:N width:10
+sdef symbol:M width:10

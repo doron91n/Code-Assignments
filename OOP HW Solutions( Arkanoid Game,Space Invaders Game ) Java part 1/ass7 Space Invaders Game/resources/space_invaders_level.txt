@@ -1,0 +1,27 @@
+
+# Level 1
+# space invaders wave
+
+
+START_LEVEL
+level_name:wave number:
+ball_velocities:0,0
+background:color(black)
+paddle_speed:650
+paddle_width:70
+block_definitions:definitions/space_invaders_blocks.txt
+blocks_start_x:50
+blocks_start_y:25
+row_height:40
+num_blocks:50
+START_BLOCKS
+
+e'e'e'e'e'e'e'e'e'e'
+e'e'e'e'e'e'e'e'e'e'
+e'e'e'e'e'e'e'e'e'e'
+e'e'e'e'e'e'e'e'e'e'
+e'e'e'e'e'e'e'e'e'e'
+END_BLOCKS
+END_LEVEL
+
+

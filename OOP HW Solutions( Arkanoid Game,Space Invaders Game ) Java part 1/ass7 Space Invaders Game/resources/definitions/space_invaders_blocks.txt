@@ -1,0 +1,5 @@
+# block definitions
+bdef symbol:e width:40 height:30 hit_points:1 fill:image(block_images/enemy.png)
+
+# spacers definitions
+sdef symbol:' width:10
