@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="GUI.View.SettingView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" Width="704">
+    <Grid Margin="0,0,10,0" Background="White" Height="572" VerticalAlignment="Top">
+        <TextBlock FontSize="15" FontWeight="Bold" Padding="3" Margin="10,98,494,444">Output Directory:</TextBlock>
+        <TextBlock Text="{Binding OutputDirectory}" FontSize="15" Padding="3" Margin="164,98,10,440"></TextBlock>
+        <TextBlock FontSize="15" FontWeight="Bold" Padding="3" Margin="10,133,494,417">Source Name:</TextBlock>
+        <TextBlock Text="{Binding SourceName}" FontSize="15" Padding="3" Margin="164,137,10,407"></TextBlock>
+        <TextBlock FontSize="15" FontWeight="Bold" Padding="3" Margin="10,165,502,381">Log Name:</TextBlock>
+        <TextBlock Text="{Binding LogName}" FontSize="15" Padding="3" Margin="164,165,10,377"></TextBlock>
+        <TextBlock FontSize="15" FontWeight="Bold" Padding="3" Margin="10,201,502,350">Thumbnail Size:</TextBlock>
+        <TextBlock Text="{Binding ThumbSize}" FontSize="15" Padding="3" Margin="164,201,10,343"></TextBlock>
+        <TextBlock Text="Settings" FontWeight="Heavy"  Foreground="DarkCyan" FontSize="40"  Margin="216,28,236,470" HorizontalAlignment="Center" FontFamily="Perpetua Titling MT" Width="242" ></TextBlock>
+        <Button x:Name="RemoveButton"
+                        DockPanel.Dock="Top"
+                        Content="Remove"
+                        HorizontalAlignment="Stretch"
+                        Block.TextAlignment="Center"
+                        Command="{Binding RemoveCommand}"
+                        AutomationProperties.AutomationId="RemoveButton" Margin="10,251,10,277" >
+            <Button.Style>
+                <Style>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=Handlers, Mode=OneWay}" Value="0">
+                            <Setter Property="Button.IsEnabled" Value="False" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <ListBox x:Name="Handlers"
+                             ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                             ScrollViewer.CanContentScroll="True"
+                                 IsTabStop="False"
+                                 DockPanel.Dock="Bottom"
+                                 ItemsSource="{Binding HandlersList}"
+                                 Margin="0,300,0,49"
+                                 SelectedItem="{Binding SelectedHandler, Mode=TwoWay}">
+        </ListBox>
+    </Grid>
+</UserControl>

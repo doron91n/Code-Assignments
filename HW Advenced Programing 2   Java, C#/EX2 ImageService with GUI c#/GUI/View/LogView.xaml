@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="GUI.View.LogView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GUI.ViewModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" Width="700">
+    <UserControl.Resources>
+        <local:Colors x:Key="Colors"/>
+    </UserControl.Resources>
+    <DockPanel Height="Auto" Width="Auto" Background="Lavender">
+        <Label HorizontalAlignment="Center"
+               FontFamily="Perpetua Titling MT"
+               Foreground="DodgerBlue" FontStyle="Normal" FontWeight="Bold"
+                        DockPanel.Dock="Top" FontSize="40" Content="Logs"/>
+        <DataGrid Name="DataGrid"   AutoGenerateColumns="False" ItemsSource="{Binding getLogsList}"
+                           Focusable="False" ScrollViewer.CanContentScroll="True" VerticalScrollBarVisibility="Visible"
+                          ColumnWidth="100" KeyboardNavigation.ControlTabNavigation="None" VerticalAlignment="Stretch" DockPanel.Dock="Bottom">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Type" Binding="{Binding Status}" Width="Auto" FontSize="15">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="Background" Value="{Binding Path=Status, Converter={StaticResource Colors}}" />
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header=" Message " Binding="{Binding Message}" Width="*" FontSize="15" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</UserControl>
