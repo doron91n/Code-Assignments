@@ -1,0 +1,5 @@
+# block definitions
+bdef symbol:$ width:10 height:10 hit_points:1 fill:color(black) 
+
+# spacers definitions
+sdef symbol:_ width:10

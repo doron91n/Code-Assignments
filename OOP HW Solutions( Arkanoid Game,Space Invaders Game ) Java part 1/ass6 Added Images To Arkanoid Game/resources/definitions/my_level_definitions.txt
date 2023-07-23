@@ -1,0 +1,167 @@
+# Level 1
+# tweety
+
+START_LEVEL
+level_name:tweety
+ball_velocities:45,550 -45,550 -30,550 30,550 15,550 -15,550 -60,550 60,550 
+background:image(background_images/sylvester.jpg)
+paddle_speed:700
+paddle_width:350
+block_definitions:definitions/tweety_block_definitions.txt
+blocks_start_x:200
+blocks_start_y:150
+row_height:10
+num_blocks:40
+START_BLOCKS
+
+´´´´´´´´´´´´´´´´´¶
+ ´´´´´´´´´´´´´´¶´´¶´´´¶¶
+ ´´´´´´´´´´´´´´¶´¶¶´¶¶
+ ´´´´´´´´´¶¶¶¶´´´´´´¶¶¶¶¶¶
+ ´´´´´´´¶¶´´´´´´´´´´´´´´´´¶¶
+ ´´´´´¶¶´´´´´´´´¶¶´´´´´´´´´´¶¶
+ ´´´¶¶´´´´´´´´´´´´´´´´´´´´´´´´¶¶
+ ´´¶¶´´´´´´´´´´´´´´´´´´´´´´´´´´¶¶
+ ´´¶´´´´´´´´´´´´´´´´´´´´´´´´´´´¶´¶
+ ´¶´´´´´´´´´´´´´´´´¶´´´´´´´´´´´´´¶
+ ´¶´´´´´´´´´´´´´¶¶¶¶´´´´´´´´´´´´´´¶
+ ´¶´´´´´´´´´´´´¶¶´¶´´´´´´´´´´´¶´´´¶
+ ´¶´´´´´´´´´´¶¶¶¶¶¶´´´´´´´¶¶¶¶´´´´¶
+ ´¶´´´´´´´´´¶¶¶¶¶¶¶´´´´´´¶¶´´¶´´´´¶
+ ´´¶´´´´´´´´¶¶¶¶¶´¶´´´´´¶¶¶¶¶¶´´´¶
+ ´´¶¶´´´´´´´¶´´´´´¶´´´´¶¶¶¶¶¶´´´¶¶
+ ´´´¶¶´´´´´´¶´´´´¶´´´´¶¶¶¶´´´´´¶
+ ´´´´¶´´´´´´¶´´´¶´´´´´¶´´´´´´´¶
+ ´´´´¶´´´´´´¶¶¶¶´´´´´´´´´¶´´¶¶
+ ´´´´¶¶´´´´´´´´´´´´´´´¶¶¶´´¶
+ ´´´´´¶¶¶´´´´´´´¶¶¶¶¶´´´´´´¶
+ ´´´´´´´´¶¶¶´´´´´¶¶´´´´´´´¶¶
+ ´´´´´´´´´´´´¶¶´´´´´¶¶¶¶¶¶´
+ ´´´´´´´´´´¶¶´´´´´´¶¶´¶
+ ´´´´´´´¶¶¶¶´´´´´´´´¶´¶¶
+ ´´´´´´´´´¶´´¶¶´´´´´¶´´´¶
+ ´´´´¶¶¶¶¶¶´¶´´´´´´´¶´´¶´
+ ´´¶¶´´´¶¶¶¶´¶´´´´´´¶´´´¶¶¶¶¶¶¶
+ ´´¶¶´´´´´´¶¶¶¶´´´´´¶´¶¶´´´´´¶¶
+ ´´¶´´´´´´´´´´¶¶¶¶¶¶¶¶´´´´´´´´´¶
+ ´´´¶¶´´´´´´´´´¶´´´¶´´´´´´´´´´¶
+ ´´´´¶¶¶¶¶¶¶¶¶¶¶´´´¶¶¶¶¶¶¶¶¶¶¶ 
+END_BLOCKS
+END_LEVEL
+
+
+# Level 2
+# bender
+
+START_LEVEL
+level_name:bender
+ball_velocities:45,550 -45,550 -30,550 30,550 15,550 -15,550 -60,550 60,550 
+background:image(background_images/futurama.jpg)
+paddle_speed:700
+paddle_width:350
+block_definitions:definitions/bender_block_definitions.txt
+blocks_start_x:50
+blocks_start_y:50
+row_height:10
+num_blocks:70
+START_BLOCKS
+_____________________$$$
+____________________$___$
+_____________________$$$
+_____________________$_$
+_____________________$_$
+___________________$$$_$$$
+_________________$$__$$$__$$$
+_______________$$__$$$$$$$___$
+______________$_______________$
+_____________$_________________$
+_____________$_________________$
+_____________$_____$$$$$$$$$$$$$$$
+_____________$____$_______________$
+_____________$____$___$$$$$$$$$$$$$
+_____________$___$___$___________$$$
+_____________$___$___$_$$$___$$$__$$
+_____________$___$___$_$$$___$$$__$$
+_____________$___$___$___________$$$
+_____________$____$___$$$$$$$$$$$$$
+_____________$_____$$$$$$$$$$$$$$
+_____________$_________________$
+_____________$____$$$$$$$$$$$$$$
+_____________$___$__$__$__$__$
+_____________$__$$$$$$$$$$$$$$
+_____________$__$___$__$__$__$
+_____________$___$$$$$$$$$$$$$$$
+____________$$$_________________$$$
+__________$$___$$$_________$$$$$___$$
+________$$________$$$$$$$$$__________$$$
+_______$__$$_____________________$$$$___$$
+____$$$$$___$$$$$$$$______$$$$$$$_______$_$
+__$______$$_________$$$$$$______________$_$$
+_$____$____$____________________________$_$_$
+_$_____$___$______________$$$$$$$$$$$___$_$_$$
+_$$$____$___$__$$$$$$$$$$$$__________$___$_$_$$
+$___$$$$____$__$_____________________$___$_$$_$
+$$$____$___$$__$_____________________$$__$_$__$
+$___$__$__$$___$______________________$__$$$__$
+$_____$$_$$____$_______________$$$____$__$_$__$
+END_BLOCKS
+END_LEVEL
+
+
+# Level 3
+# Star Of David
+
+START_LEVEL
+level_name:Star Of David
+ball_velocities:45,550 -45,550 -30,550 30,550 15,550 -15,550 -60,550 60,550 
+background:color(white)
+paddle_speed:650
+paddle_width:300
+block_definitions:definitions/starDavid_block_definitions.txt
+blocks_start_x:50
+blocks_start_y:50
+row_height:10
+num_blocks:100
+START_BLOCKS
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMmmmmMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMmmmmmmMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMmmmmmmmmMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmmmmmmmmmmNMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMNmmmmmmmmmmmmNMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMNmmmmmmmmmmmmmmNMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMmmmmmmmmMMmmmmmmmmMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMmmmmmmmmMMMMmmmmmmmmMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMmmmmmmmmMMMMMMmmmmmmmmMMMMMMMMMMMMMMMMMMMMMMMM
+NmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmN
+MMmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmMM
+MMMmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmMMM
+MMMMmmmmmmmmNMMMMMNmmmmmmmmNMMMMMMMMMMMMMMNmmmmmmmmNMMMMMNmmmmmmmmMMMM
+MMMMMNmmmmmmmNMMMMmmmmmmmmMMMMMMMMMMMMMMMMMMmmmmmmmmMMMMNmmmmmmmNMMMMM
+MMMMMMNmmmmmmmNMMmmmmmmmmMMMMMMMMMMMMMMMMMMMMmmmmmmmmMMNmmmmmmmNMMMMMM
+MMMMMMMNmmmmmmmNmmmmmmmNMMMMMMMMMMMMMMMMMMMMMMNmmmmmmmNmmmmmmmNMMMMMMM
+MMMMMMMMNmmmmmmmmmmmmmNMMMMMMMMMMMMMMMMMMMMMMMMNmmmmmmmmmmmmmNMMMMMMMM
+MMMMMMMMMMmmmmmmmmmmmNMMMMMMMMMMMMMMMMMMMMMMMMMMNmmmmmmmmmmmMMMMMMMMMM
+MMMMMMMMMMMmmmmmmmmmMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmmmmmmmmmMMMMMMMMMMM
+MMMMMMMMMMMmmmmmmmmmNMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmmmmmmmmmMMMMMMMMMMM
+MMMMMMMMMMmmmmmmmmmmmNMMMMMMMMMMMMMMMMMMMMMMMMMMNmmmmmmmmmmmMMMMMMMMMM
+MMMMMMMMNmmmmmmmmmmmmmNMMMMMMMMMMMMMMMMMMMMMMMMNmmmmmmmmmmmmmNMMMMMMMM
+MMMMMMMNmmmmmmmNmmmmmmmNMMMMMMMMMMMMMMMMMMMMMMNmmmmmmmNmmmmmmmNMMMMMMM
+MMMMMMNmmmmmmmNMMmmmmmmmmMMMMMMMMMMMMMMMMMMMMmmmmmmmmMMNmmmmmmmNMMMMMM
+MMMMMNmmmmmmmNMMMMmmmmmmmmMMMMMMMMMMMMMMMMMMmmmmmmmmMMMMNmmmmmmmNMMMMM
+MMMMmmmmmmmmNMMMMMNmmmmmmmmNMMMMMMMMMMMMMMNmmmmmmmmNMMMMMNmmmmmmmmMMMM
+MMMmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmMMM
+MMmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmMM
+NmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmN
+MMMMMMMMMMMMMMMMMMMMMMMMmmmmmmmmMMMMMMmmmmmmmmMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMmmmmmmmmMMMMmmmmmmmmMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMmmmmmmmmNNmmmmmmmmMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMNmmmmmmmmmmmmmmNMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMNmmmmmmmmmmmmNMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmmmmmmmmmmNMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMmmmmmmmmMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMmmmmmmMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMmmmmMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+END_BLOCKS
+END_LEVEL
