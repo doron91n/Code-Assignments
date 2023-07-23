@@ -1,0 +1,7 @@
+www.biu.ac.il,1.2.3.4,180
+mail.biu.ac.il,1.2.3.5,240
+biu.ac.il,1.2.3.4,180
+123,123,123
+fromserver,213,22
+fromserver2,213,50
+fromparent5,9.9.9.9,10
